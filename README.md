@@ -7,7 +7,6 @@ A marketing concept generator that helps marketing professionals create targeted
 - **Audience Creation**: Define target audiences with comprehensive demographic variables
 - **AI-Powered Concept Generation**: Generate creative marketing concepts tailored to specific audiences using OpenAI
 - **Concept Management**: Save and view generated concepts in Supabase
-- **Modern UI**: Clean, responsive interface built with Next.js and Tailwind CSS
 
 ## Tech Stack
 
@@ -15,7 +14,6 @@ A marketing concept generator that helps marketing professionals create targeted
 - **Styling**: Tailwind CSS
 - **Database**: Supabase (PostgreSQL)
 - **AI**: OpenAI GPT-3.5-turbo
-- **Icons**: Lucide React
 
 ## Key Design Decisions
 
@@ -49,6 +47,13 @@ The application works out-of-the-box without any external dependencies:
 ```bash
 npm install
 npm run dev
+```
+
+At your local environment for supabase, run this command before ```npm run dev```
+
+```bash
+npm run supabase:start
+npm run supbase:reset
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see the application in demo mode.
@@ -126,20 +131,13 @@ concept-generator/
 │   └── ConceptList.tsx    # Concept display and management
 ├── lib/                   # Utility libraries
 │   ├── openai.ts         # OpenAI integration
+│   ├── api.ts            # API calling on frontend
 │   └── supabase.ts       # Supabase client and functions
 ├── types/                 # TypeScript type definitions
 │   └── index.ts          # Main type definitions
 ├── supabase-schema.sql    # Database schema
 └── README.md             # This file
 ```
-
-## Assumptions Made
-
-1. **Target User**: Marketing professionals at F500 companies who need quick, creative concept generation
-2. **Use Case**: Internal brainstorming and ideation, not client-facing presentations
-3. **Data Privacy**: Concepts are stored in a shared database (in production, would need user authentication)
-4. **AI Model**: GPT-3.5-turbo provides sufficient creativity for this use case
-5. **Scalability**: Single-user demo application (would need user management for production)
 
 ## Future Enhancements
 
@@ -150,11 +148,6 @@ concept-generator/
 - **Concept Analytics**: Track which concepts perform best
 - **Collaboration**: Share concepts with team members
 - **Templates**: Pre-built audience templates for common market segments
-
-## API Costs
-
-- **OpenAI**: ~$0.002 per concept generation (GPT-3.5-turbo)
-- **Supabase**: Free tier supports up to 500MB database and 50,000 monthly active users
 
 ## Development Notes
 

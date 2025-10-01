@@ -9,6 +9,13 @@ npm install
 npm run dev
 ```
 
+At your local environment for supabase, run this command before ```npm run dev```
+
+```bash
+npm run supabase:start
+npm run supbase:reset
+```
+
 Open [http://localhost:3000](http://localhost:3000) to see the application.
 
 ## Full Deployment with External Services
@@ -48,7 +55,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the application.
    - Copy the Project URL and anon public key
    - Add these to your Vercel environment variables
 
-### 3. Set up OpenAI (Optional)
+### 3. Set up OpenAI
 
 1. **Get OpenAI API Key**:
    - Go to [platform.openai.com](https://platform.openai.com)
@@ -57,46 +64,6 @@ Open [http://localhost:3000](http://localhost:3000) to see the application.
 
 2. **Add to Environment Variables**:
    - Add `OPENAI_API_KEY` to your Vercel environment variables
-
-### 4. Deploy
-
-1. **Push to GitHub**:
-   ```bash
-   git add .
-   git commit -m "Initial deployment"
-   git push origin main
-   ```
-
-2. **Vercel Auto-Deploy**:
-   - Vercel will automatically deploy your changes
-   - Your app will be available at `https://your-project.vercel.app`
-
-## Environment Variables Reference
-
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `NEXT_PUBLIC_SUPABASE_URL` | No | Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | No | Supabase anonymous key |
-| `OPENAI_API_KEY` | No | OpenAI API key for AI features |
-
-## Demo Mode Features
-
-When external services are not configured, the app provides:
-
-- ✅ **Mock AI Concepts**: Pre-generated concepts tailored to audience data
-- ✅ **In-Memory Storage**: Concepts stored in browser memory
-- ✅ **Full UI/UX**: Complete user interface and workflow
-
-## Production Considerations
-
-For production deployment, consider:
-
-1. **Authentication**: Add user authentication for multi-user support
-2. **Database Security**: Implement proper RLS policies
-3. **API Rate Limiting**: Add rate limiting for concept generation
-4. **Error Monitoring**: Add error tracking (Sentry, etc.)
-5. **Analytics**: Add usage analytics
-6. **Backup Strategy**: Regular database backups
 
 ## Troubleshooting
 
