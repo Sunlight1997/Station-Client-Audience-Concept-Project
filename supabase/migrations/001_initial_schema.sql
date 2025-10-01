@@ -18,7 +18,7 @@ CREATE TABLE concepts (
   title VARCHAR(255) NOT NULL,
   description TEXT NOT NULL,
   audience_id UUID NOT NULL REFERENCES audiences(id) ON DELETE CASCADE,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Create indexes for better performance
