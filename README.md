@@ -1,6 +1,10 @@
-# Concept Generator
 
-[Watch the demo](recording.gif)
+
+
+https://github.com/user-attachments/assets/67ce2ff0-5c31-492c-8f48-0c5edcbca94e
+
+
+# Concept Generator
 
 A marketing concept generator that helps marketing professionals create targeted creative concepts based on audience demographics using AI.
 
