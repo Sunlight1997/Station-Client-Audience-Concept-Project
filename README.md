@@ -1,6 +1,6 @@
 # Concept Generator
 
-<video src="recording.mp4" controls width="1000"></video>
+[Watch the demo](recording.gif)
 
 A marketing concept generator that helps marketing professionals create targeted creative concepts based on audience demographics using AI.
 
